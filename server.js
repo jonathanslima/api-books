@@ -5,7 +5,7 @@ const cors = require('cors');
 // init server and allow to send json data
 const app = express();
 app.use(express.json());
-// app.use(cors);
+app.use(cors());
 
 // Connect database
 mongoose.connect('mongodb://localhost:27017/books', {useNewUrlParser: true});
